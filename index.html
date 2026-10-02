@@ -120,6 +120,23 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,247,2
 .order p{opacity:.9;margin-bottom:26px}
 .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;max-width:820px;margin:0 auto}
 .form input,.form select{padding:15px 18px;border-radius:14px;border:none;font-size:16px;font-family:inherit;width:100%;outline:none}
+.form input[type="date"]{
+  -webkit-appearance:none;
+  appearance:none;
+  min-width:0;
+  width:100%;
+  max-width:100%;
+  display:block;
+  background:#fff;
+  color:var(--dark);
+  line-height:1.2;
+}
+.form input[type="date"]::-webkit-date-and-time-value{
+  text-align:left;
+}
+.form input[type="date"]::-webkit-calendar-picker-indicator{
+  margin-left:auto;
+}
 /* font-size:16px у инпутов — чтобы iPhone не зумил экран при фокусе */
 .form .btn{background:#fff;color:var(--c4)}
 .form .btn:hover{transform:translateY(-3px)}
